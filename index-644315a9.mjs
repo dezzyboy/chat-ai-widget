@@ -2643,7 +2643,7 @@ var Oa = function() {
           case 0:
             e = t.path, r = t.method, i = ![Z.GET, Z.DELETE].includes(r), s = this._sdkState.api, a = "".concat(s.host).concat(e).concat(i ? "" : t.query), o = i ? t.payload : null, u = this._createHeader(t, o instanceof FormData ? o : void 0), l = new AbortController(), c = l.signal, this._abortControl.set(t.requestId, l), d = Date.now(), b.label = 1;
           case 1:
-            return b.trys.push([1, 8, , 9]), this._shouldImportFetchCompat && (this._shouldImportFetchCompat = !1, (typeof globalThis < "u" && globalThis || typeof self < "u" && self || typeof global < "u" && global || { fetch: null }).fetch = null), typeof AbortController < "u" ? [3, 3] : [4, import("./__bundle-2aa1a987-bc0eea4f.mjs").then((E) => E._)];
+            return b.trys.push([1, 8, , 9]), this._shouldImportFetchCompat && (this._shouldImportFetchCompat = !1, (typeof globalThis < "u" && globalThis || typeof self < "u" && self || typeof global < "u" && global || { fetch: null }).fetch = null), typeof AbortController < "u" ? [3, 3] : [4, import("./__bundle-2aa1a987-4e4d7f7b.mjs").then((E) => E._)];
           case 2:
             b.sent(), b.label = 3;
           case 3:
@@ -25115,7 +25115,7 @@ const em = () => {
   });
   const [p, m] = Ce(null);
   nt(() => {
-    s && !p && import("./WebAudioUtils-b0d3696c-8001b8c9.mjs").then((C) => {
+    s && !p && import("./WebAudioUtils-b0d3696c-5ee25d26.mjs").then((C) => {
       m(C);
     });
   }, []);
@@ -34516,13 +34516,8 @@ const mS = Ke.div`
   line-height: 1.43;
 `;
 function gS(n) {
-  const { message: t, data: e } = n;
-  let r = "";
-  if (e) {
-    const s = JSON.parse(e).source_url;
-    s && (r = ` I can answer your questions based on ${`<a href="${s}" target="_blank">${s}</a>`}. Ask away!`);
-  }
-  return /* @__PURE__ */ J.jsx(mS, { children: /* @__PURE__ */ J.jsx(AS, { dangerouslySetInnerHTML: { __html: t + "." + r } }) });
+  const { message: t } = n;
+  return /* @__PURE__ */ J.jsx(mS, { children: /* @__PURE__ */ J.jsx(AS, { dangerouslySetInnerHTML: { __html: t } }) });
 }
 function yS(n, t) {
   if (n == null)
@@ -36045,13 +36040,7 @@ function h4(n) {
         {
           botUser: r,
           message: t,
-          bodyComponent: /* @__PURE__ */ J.jsx(
-            gS,
-            {
-              message: t.message,
-              data: t.data
-            }
-          ),
+          bodyComponent: /* @__PURE__ */ J.jsx(gS, { message: t.message }),
           messageCount: s.length,
           zIndex: 30,
           bodyStyle: { maxWidth: "255px", width: "calc(100% - 98px)" }
