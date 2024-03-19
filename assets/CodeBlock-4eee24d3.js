@@ -1,4 +1,4 @@
-import{s as e,r as l,j as t}from"./index-a3e497b5.js";const d=e.div`
+import{s as e,r as l,j as t}from"./index-e53f965d.js";const d=e.div`
   position: relative; /* For the copy button positioning */
   padding: 20px;
   background: #000;
